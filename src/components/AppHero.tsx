@@ -1,7 +1,6 @@
 import { useRef } from "react";
 import styled, { keyframes } from "styled-components";
 import appHeroImg from "../assets/app_hero.png";
-import { useResizeObserver } from "../hooks";
 
 const StyledAppHero = styled.div`
   box-sizing: border-box;
