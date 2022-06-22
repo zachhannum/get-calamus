@@ -14,8 +14,6 @@ const useResizeObserver = (
       }
 
       const entry = entries[0];
-      console.log(entry.contentRect.width);
-      console.log(entry.contentRect.height);
       setWidth(entry.contentRect.width);
       setHeight(entry.contentRect.height);
 

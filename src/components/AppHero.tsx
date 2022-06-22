@@ -29,7 +29,7 @@ const gradient = keyframes`
 const StyledGradientRect = styled.div`
   position: absolute;
   top: -10%;
-  z-index: -1;
+  z-index: 1;
   width: 110%;
   left: -5%;
   aspect-ratio: 2.5;
@@ -42,25 +42,13 @@ const StyledGradientRect = styled.div`
   box-shadow: 0px 10px 20px 20px rgba(0, 0, 0, 0.1);
 `;
 
-type StyledBackgroundBlurProps = {
-  height?: number;
-  width?: number;
-};
-
-const StyledBackgroundBlur = styled.div<StyledBackgroundBlurProps>`
-  position: absolute;
-  height: ${(p) => `${p.height}px`};
-  width: ${(p) => `${p.width}px`};
-  z-index: 1;
+const HeroImage = styled.img`
+  z-index: 2;
+  max-width: 100%;
+  max-height: 50vh;
+  filter: drop-shadow(0px 0px 20px rgba(0, 0, 0, 0.5));
   backdrop-filter: blur(40px);
   -webkit-backdrop-filter: blur(40px);
-`;
-
-const HeroImage = styled.img`
-  max-width: 85vw;
-  max-height: 50vh;
-  z-index: 2;
-  filter: drop-shadow(0px 0px 20px rgba(0, 0, 0, 0.5));
 `;
 
 const AppHeroImage = styled.div`
@@ -70,27 +58,17 @@ const AppHeroImage = styled.div`
   display: flex;
   align-content: center;
   justify-content: center;
+  width: 85%;
 `;
-
-const Tagline = styled.span`
-  padding: 0px 20px;
-  box-sizing: border-box;
-  text-align: center;
-`
 
 const AppHero = () => {
   const appHeroRef = useRef<HTMLImageElement | null>(null);
-  const [imgHeight, imgWidth] = useResizeObserver(appHeroRef);
 
   return (
     <StyledAppHero>
-      <Tagline>
-        <strong>Write</strong> and <strong>Publish</strong> novels with ease.
-      </Tagline>
       <AppHeroImage>
         <HeroImage src={appHeroImg} alt="app" ref={appHeroRef} />
         <StyledGradientRect />
-        <StyledBackgroundBlur height={imgHeight} width={imgWidth} />
       </AppHeroImage>
     </StyledAppHero>
   );

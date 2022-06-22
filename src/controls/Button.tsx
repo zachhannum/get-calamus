@@ -1,12 +1,14 @@
 import styled from "styled-components";
 import Color from "color";
 
-type ButtonProps = {
-  children: React.ReactNode;
-};
+type ButtonProps = React.ComponentPropsWithRef<'a'>;
 
-const StyledButton = styled.button`
+const StyledButton = styled.a`
   all: unset;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
   background-color: ${(p) => p.theme.primary};
   font-size: 0.7em;
   font-weight: 700;
@@ -23,8 +25,8 @@ const StyledButton = styled.button`
   transition: all 200ms ease-in-out;
 `;
 
-const Button = ({ children }: ButtonProps) => {
-  return <StyledButton>{children}</StyledButton>;
+const Button = (props: ButtonProps) => {
+  return <StyledButton {...props} />;
 };
 
 export default Button;

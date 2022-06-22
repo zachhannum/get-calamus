@@ -13,23 +13,43 @@ const StyledApp = styled.div`
   align-content: center;
 `;
 
-const StyledContent = styled.div`
+const Hero = styled.div`
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
+`;
+
+const Tagline = styled.span`
+  font-size: 2em;
+  color: ${(p) => p.theme.fg};
+  padding: 0px 20px;
+  box-sizing: border-box;
+  text-align: center;
+`;
+
+const AppContent = styled.div`
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
-  align-content: center;
-  gap: 25px;
+  gap: 50px;
 `;
 
 function App() {
   return (
     <ThemeProvider theme={theme}>
       <StyledApp>
-        <StyledContent>
+        <AppContent>
           <AppHeader />
-          <AppHero />
-          <AppDownload />
-        </StyledContent>
+          <Tagline>
+            <strong>Write</strong> and <strong>Publish</strong> novels with
+            ease.
+          </Tagline>
+          <Hero>
+            <AppHero />
+            <AppDownload />
+          </Hero>
+        </AppContent>
         <Copyright />
       </StyledApp>
     </ThemeProvider>
