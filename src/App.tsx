@@ -1,25 +1,38 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import styled, { ThemeProvider } from "styled-components";
+import theme from "./theme/theme";
+import { AppHeader, AppHero, AppDownload, Copyright } from "./components";
+
+const StyledApp = styled.div`
+  background-color: ${(p) => p.theme.bg};
+  font-family: "Poppins";
+  min-height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-content: center;
+`;
+
+const StyledContent = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-content: center;
+  gap: 25px;
+`;
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <ThemeProvider theme={theme}>
+      <StyledApp>
+        <StyledContent>
+          <AppHeader />
+          <AppHero />
+          <AppDownload />
+        </StyledContent>
+        <Copyright />
+      </StyledApp>
+    </ThemeProvider>
   );
 }
 
