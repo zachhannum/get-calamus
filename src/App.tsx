@@ -1,9 +1,15 @@
 import styled, { ThemeProvider } from "styled-components";
 import theme from "./theme/theme";
+import Color from "color";
 import { AppHeader, AppHero, AppDownload, Copyright } from "./components";
 
 const StyledApp = styled.div`
   background-color: ${(p) => p.theme.bg};
+  background: linear-gradient(
+    -45deg,
+    ${(p) => p.theme.bg},
+    ${(p) => Color(p.theme.bg).darken(0.4).hsl().toString()}
+  );
   font-family: "Poppins";
   min-height: 100vh;
   width: 100vw;
