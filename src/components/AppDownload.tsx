@@ -29,6 +29,7 @@ const StyledButtons = styled.div`
 const DownloadIcon = styled(Download)`
   color: ${(p) => p.theme.fg};
   height: 1em;
+  padding: 5px;
 `;
 
 const ReleaseVersion = styled.span`
