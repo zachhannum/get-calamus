@@ -6,6 +6,8 @@
   <p>
    Download site for <a href="https://github.com/midnightprioriem/calamus">Calamus</a>.
   </p>
+  
+  [![Publish](https://github.com/midnightprioriem/get-calamus/actions/workflows/publish.yml/badge.svg)](https://github.com/midnightprioriem/get-calamus/actions/workflows/publish.yml)
 
 </div>
 
