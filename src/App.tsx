@@ -21,7 +21,7 @@ const StyledApp = styled.div`
 
 const Hero = styled.div`
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   flex-wrap: wrap;
   justify-content: center;
   align-content: center;
@@ -52,8 +52,8 @@ function App() {
             ease.
           </Tagline>
           <Hero>
-            <AppHero />
             <AppDownload />
+            <AppHero />
           </Hero>
         </AppContent>
         <Copyright />

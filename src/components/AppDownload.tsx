@@ -66,6 +66,7 @@ const AppDownload = () => {
     const url = `https://api.github.com/repos/midnightprioriem/calamus/releases`;
     const { data } = await axios.get(url);
     const latestRelease = data[0] as GithubRelease;
+    console.log(latestRelease);
     latestRelease.assets.forEach((asset) => {
       //set windows url
       if (asset.name.endsWith(".exe")) {
@@ -89,7 +90,7 @@ const AppDownload = () => {
   const [windowsUrl, setWindowsUrl] = useState("");
   const [macSiliconUrl, setMacSiliconUrl] = useState("");
   const [macIntelUrl, setMacIntelUrl] = useState("");
-  const [releaseVersion, setReleaseVersion] = useState("");
+  const [releaseVersion, setReleaseVersion] = useState("fetching latest release...");
 
   return (
     <StyledAppDownload>

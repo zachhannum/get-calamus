@@ -1,3 +1,14 @@
 body {
   margin: 0;
 }
+
+@font-face {
+  /* Copyright: Copyright 2020 The Inter Project Authors (https://github.com/rsms/inter) */
+  font-family: "Poppins";
+  font-style: normal;
+  src: url(./font/Poppins-Bold.ttf) format("ttf"),
+    url(./font/Poppins-BoldItalic.ttf) format("ttf"),
+    url(./font/Poppins-Medium.ttf) format("ttf"),
+    url(./font/Poppins-MediumItalic.ttf) format("ttf");
+  font-display: swap;
+}
