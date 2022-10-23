@@ -6,9 +6,29 @@ body {
   /* Copyright: Copyright 2020 The Inter Project Authors (https://github.com/rsms/inter) */
   font-family: "Poppins";
   font-style: normal;
-  src: url(./font/Poppins-Bold.ttf) format("ttf"),
-    url(./font/Poppins-BoldItalic.ttf) format("ttf"),
-    url(./font/Poppins-Medium.ttf) format("ttf"),
-    url(./font/Poppins-MediumItalic.ttf) format("ttf");
-  font-display: swap;
+  font-weight: 700;
+  src: url(./font/poppins-v20-latin-700.woff) format("woff");
+  font-display: block;
+}
+@font-face {
+  /* Copyright: Copyright 2020 The Inter Project Authors (https://github.com/rsms/inter) */
+  font-family: "Poppins";
+  font-style: italic;
+  font-weight: 700;
+  src: url(./font/poppins-v20-latin-700italic.woff) format("woff");
+  font-display: block;
+}
+@font-face {
+  /* Copyright: Copyright 2020 The Inter Project Authors (https://github.com/rsms/inter) */
+  font-family: "Poppins";
+  font-style: normal;
+  src: url(./font/poppins-v20-latin-regular.woff) format("woff");
+  font-display: block;
+}
+@font-face {
+  /* Copyright: Copyright 2020 The Inter Project Authors (https://github.com/rsms/inter) */
+  font-family: "Poppins";
+  font-style: italic;
+  src: url(./font/poppins-v20-latin-italic.woff) format("woff");
+  font-display: block;
 }
