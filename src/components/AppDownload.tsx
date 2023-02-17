@@ -27,22 +27,20 @@ const StyledButtons = styled.div`
 `;
 
 const DownloadIcon = styled(Download)`
-  color: ${(p) => p.theme.fg};
   height: 1em;
   padding: 5px;
 `;
 
 const ReleaseVersion = styled.span`
   user-select: none;
-  background-color: ${(p) => p.theme.secondary};
   color: ${(p) => p.theme.fg};
-  border-radius: 10px;
+  background-color: black;
+  border: 1px solid ${(p) => p.theme.fg};
+  border-radius: 7px;
   padding: 5px 10px;
   box-sizing: border-box;
   margin: 10px;
   font-size: 0.4em;
-  box-shadow: 0px 5px 10px
-    ${(p) => Color(p.theme.secondaryShadow).alpha(0.7).hsl().toString()};
 `;
 
 const Title = styled.div`
@@ -55,10 +53,11 @@ const Title = styled.div`
 const Link = styled.a`
   font-weight: 700;
   color: ${(p) => p.theme.fg};
+  opacity: 0.5;
   &:hover {
-    color: ${(p) => p.theme.primary};
+    opacity: 1;
   }
-  transition: color 100ms ease-in-out;
+  transition: opacity 100ms ease-in-out;
 `;
 
 const AppDownload = () => {
@@ -113,7 +112,7 @@ const AppDownload = () => {
         </Button>
       </StyledButtons>
       <span>
-        Find&nbsp;all&nbsp;of&nbsp;our&nbsp;releases&nbsp;on&nbsp;
+        Find&nbsp;all&nbsp;releases&nbsp;on&nbsp;
         <Link
           href="https://github.com/midnightprioriem/calamus/releases"
           target="_blank"

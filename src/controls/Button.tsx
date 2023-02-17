@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import Color from "color";
 
 type ButtonProps = React.ComponentPropsWithRef<'a'>;
 
@@ -9,18 +8,16 @@ const StyledButton = styled.a`
   align-items: center;
   justify-content: center;
   gap: 5px;
-  background-color: ${(p) => p.theme.primary};
+  color: ${(p) => p.theme.bg};
+  background-color: ${(p) => p.theme.fg};
   font-size: 0.7em;
   font-weight: 700;
   padding: 10px 15px;
-  border-radius: 15px;
+  border-radius: 12px;
   cursor: pointer;
-  box-shadow: 0px 5px 10px
-    ${(p) => Color(p.theme.primaryShadow).alpha(0.7).hsl().toString()};
   &:hover {
-    box-shadow: 0px 10px 20px
-      ${(p) => Color(p.theme.primaryShadow).alpha(0.7).hsl().toString()};
-    transform: scale(1.05) translate(0px, -3px);
+    color: ${(p) => p.theme.fg};
+    background-color: ${(p) => p.theme.bg};
   }
   transition: all 200ms ease-in-out;
 `;
