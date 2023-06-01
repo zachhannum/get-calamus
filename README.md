@@ -1,13 +1,13 @@
 <div align="center">
 
   <img src="public/logo512.png" alt="logo" width="200" height="auto" />
-  <h1>Calamus</h1>
+  <h1>Orca</h1>
   
   <p>
-   Download site for <a href="https://github.com/midnightprioriem/calamus">Calamus</a>.
+   Download site for <a href="https://github.com/zachhannum/orca">Orca</a>.
   </p>
   
-  [![Publish](https://github.com/midnightprioriem/get-calamus/actions/workflows/publish.yml/badge.svg)](https://github.com/midnightprioriem/get-calamus/actions/workflows/publish.yml)
+  [![Publish](https://github.com/zachhannum/get-orca/actions/workflows/publish.yml/badge.svg)](https://github.com/midnightprioriem/get-orca/actions/workflows/publish.yml)
 
 </div>
 

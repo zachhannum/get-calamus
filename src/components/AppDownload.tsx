@@ -34,8 +34,7 @@ const DownloadIcon = styled(Download)`
 const ReleaseVersion = styled.span`
   user-select: none;
   color: ${(p) => p.theme.fg};
-  background-color: black;
-  border: 1px solid ${(p) => p.theme.fg};
+  background-color: ${(p) => Color(p.theme.fg).alpha(0.3).hsl().toString()};
   border-radius: 7px;
   padding: 5px 10px;
   box-sizing: border-box;
@@ -62,7 +61,7 @@ const Link = styled.a`
 
 const AppDownload = () => {
   const getReleases = async () => {
-    const url = `https://api.github.com/repos/midnightprioriem/calamus/releases`;
+    const url = `https://api.github.com/repos/zachhannum/orca/releases`;
     const { data } = await axios.get(url);
     const latestRelease = data[0] as GithubRelease;
     console.log(latestRelease);
@@ -114,7 +113,7 @@ const AppDownload = () => {
       <span>
         Find&nbsp;all&nbsp;releases&nbsp;on&nbsp;
         <Link
-          href="https://github.com/midnightprioriem/calamus/releases"
+          href="https://github.com/zachhannum/orca/releases"
           target="_blank"
           rel="noreferrer"
         >

@@ -14,9 +14,8 @@ const GithubIcon = styled(Github)`
 `;
 
 const StyledLogoImg = styled.img`
-  height: 70px;
-  width: 70px;
-  filter: drop-shadow(0px 0px 10px rgba(0, 0, 0, 0.4));
+  height: 128px;
+  width: 128px;
 `;
 
 const StyledAppHeader = styled.div`
@@ -32,14 +31,15 @@ const StyledAppHeaderContainer = styled.div`
   display: flex;
   align-items: center;
   align-content: center;
-  gap: 30px;
+  gap: 15px;
 `;
 
 const StyledAppName = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 1.8em;
+  font-size: 2em;
+  font-weight: 600;
   user-select: none;
   text-align: center;
 `;
@@ -49,11 +49,11 @@ const AppHeader = () => {
     <StyledAppHeader>
       <StyledAppHeaderContainer>
         <StyledLogoImg src={logo} alt="logo" />
-        <StyledAppName>calamus</StyledAppName>
+        <StyledAppName>orca</StyledAppName>
       </StyledAppHeaderContainer>
       <StyledAppHeaderContainer>
         <a
-          href="https://github.com/midnightprioriem/calamus"
+          href="https://github.com/zachhannum/orca"
           target="_blank"
           rel="noreferrer"
         >

@@ -5,11 +5,13 @@ import { AppHeader, AppHero, AppDownload, Copyright } from "./components";
 
 const StyledApp = styled.div`
   background-color: ${(p) => p.theme.bg};
-  background: linear-gradient(
-    -45deg,
-    ${(p) => p.theme.bg},
-    ${(p) => Color(p.theme.bg).darken(0.4).hsl().toString()}
-  );
+  background: radial-gradient(circle farthest-corner at 0% 100%, #255b7233 0%, transparent 50%),
+    radial-gradient(
+      circle farthest-corner at 100% 0%,
+      #4621b633 0%,
+      transparent 50%
+    ),
+    radial-gradient(circle, #1a2d40, #040213);
   font-family: "Poppins";
   min-height: 100vh;
   width: 100vw;
